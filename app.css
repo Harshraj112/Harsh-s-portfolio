@@ -1,0 +1,143 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  /* overflow: hidden; This restrict scrolling */
+  overflow-x: hidden;
+  font-family: sans-serif;
+  color: #FFFFFF;
+}
+
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* Full screen section */
+  /* display: flex; */
+  /* justify-content: center;
+  align-items: center;
+  text-align: center; */
+}
+
+.video-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -2;
+  /* opacity: 0.2; */
+  /* background-color: rgba(0, 0, 0, 0.1); */
+  
+}
+
+.hero-content {
+  z-index: 10;
+  padding: 2rem;
+  border-radius: 1rem;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.7); /* Adjust 0.5 to change darkness */
+  z-index: -1; /* Below content, above video */
+}
+
+.hero-content {
+    /* height: 100%; */
+    font-family: "Oswald", sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: xxx-large;
+    padding-top: 10rem;
+    line-height: 7.5rem;
+    row-gap: 6rem;
+}
+
+.heading {
+    letter-spacing: 0.5rem;
+}
+
+
+.zeroth-heading {
+    font-size: 3rem;
+    color: #00E6E6;
+}
+
+.primary-heading {
+    /* color: #BF00FF; */
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.secondary-heading {
+    color: #1E90FF;
+}
+
+.tertiary-heading {
+    color: #F8F8FF;
+}
+
+.discription-heading {
+    font-size: 2.5rem;
+    line-height: 3rem;
+    margin-top: 2.4rem;
+}
+
+.strong {
+    background: linear-gradient(to right, #f0f, #00f);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.contact-logo {
+    display: flex;
+    gap: 4rem;
+    /* margin-top: 4rem; */
+}
+
+.logo, .down-arrow {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 50%;
+    height: 7rem;
+    width: 7rem;
+    /* padding: 5 5rem; */
+    transform: scale(0.9);
+}
+
+.logo:hover {
+    color: #1E90FF;
+}
+
+.down-arrow {
+    color: #1E90FF;
+}
+
+/* .about-me {
+    margin-top: 12rem;
+    margin-bottom: 18rem;
+} */
+
+.container {
+  max-width: 120rem;
+  padding: 0 3.2rem;
+  margin: 0 auto;
+  color: black;
+}
