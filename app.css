@@ -59,7 +59,7 @@ body {
 
 .hero-content {
     /* height: 100%; */
-    font-family: "Oswald", sans-serif;
+    font-family: Space Mono, monospace;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -68,11 +68,11 @@ body {
     font-size: xxx-large;
     padding-top: 10rem;
     line-height: 7.5rem;
-    row-gap: 6rem;
+    row-gap: 5rem;
 }
 
 .heading {
-    letter-spacing: 0.5rem;
+    letter-spacing: 0rem;
 }
 
 
@@ -84,10 +84,16 @@ body {
 .primary-heading {
     /* color: #BF00FF; */
     color: rgba(255, 255, 255, 0.8);
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.8), #00f);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    word-spacing: -2 rem;
+
 }
 
 .secondary-heading {
-    color: #1E90FF;
+    color: pink;
+    opacity: 0.7;
 }
 
 .tertiary-heading {
@@ -98,6 +104,7 @@ body {
     font-size: 2.5rem;
     line-height: 3rem;
     margin-top: 2.4rem;
+    opacity: 0.7;
 }
 
 .strong {
@@ -130,14 +137,272 @@ body {
     color: #1E90FF;
 }
 
-/* .about-me {
-    margin-top: 12rem;
-    margin-bottom: 18rem;
-} */
+.about-us {
+    color: white;
+    background: #1c1c1c
+
+}
 
 .container {
   max-width: 120rem;
-  padding: 0 3.2rem;
+  /* padding: 0 3.2rem; */
   margin: 0 auto;
+  color: white;
+  padding-top: 14rem;
+  padding-bottom: 7rem;
+}
+
+.custom-shape-divider-bottom-1749701377 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    z-index: -1;
+}
+
+.custom-shape-divider-bottom-1749701377 svg {
+    position: relative;
+    display: block;
+    width: calc(196% + 1.3px);
+    height: 123px;
+    /* z-index: -999; */
+}
+
+.custom-shape-divider-bottom-1749701377 .shape-fill {
+    fill: #1c1c1c;
+    /* z-index: -999; */
+}
+
+.header-about {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    row-gap: 2rem;
+}
+
+.about-me-text {
+    padding: 0.5rem 2rem;
+    font-size: small;
+    border-radius: 40%;
+    background-color: #8B5CF633;
+    color: #9B87F5;
+}
+
+.my-heading {
+    font-family: "Space Mono", monospace;
+    font-size: xx-large;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.8), #00f);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.underline {
+    height: 0.5rem;
+    width: 8cqmax;
+     background: linear-gradient(to left, rgba(255, 255, 255, 0.8), #00f);
+}
+
+.grid {
+  display: grid;
+  column-gap: 9.4rem;
+  row-gap: 9.6rem;
+}
+
+.grid--2-cols {
+  grid-template-columns: 1fr 1fr;
+}
+
+.grid--3-cols {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.grid--4-cols {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.grid--5-cols {
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.side-img-1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.astro-img {
+    height: 50rem;
+    width: 50rem;
+    border: 2px solid black;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.astro-img img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: top left;
+    max-width: 100%;
+}
+
+.info-sec {
+    margin-top: 8rem;
+}
+
+.myself {
+    text-align: start;
+}
+
+.heading-1 {
+    font-size: xx-large;
+    font-family: "Space Mono", monospace;
+    font-weight: bold;
+    background: linear-gradient(90deg, #11998e, #38ef7d);
+     -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.discription-myself  {
+    font-size: medium;
+    font-family: sans-serif;
+}
+
+.short-discription, .my-past {
+    margin-top: 2rem;
+    line-height: 2.2rem;
+    word-spacing: 0.5rem;
+}
+
+.iiit, .car_rental {
+    background: linear-gradient(90deg, #00c9ff, #92fe9d);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.reliance {
+    background: linear-gradient(90deg, #3a1c71, #d76d77, #ffaf7b);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.omnifood {
+   background: linear-gradient(90deg, #fcb045, #fd1d1d, #833ab4);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.myself {
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    /* justify-content: center;
+    transform: translateY(-2rem); */
+}
+
+.skills-heading {
+    margin-top: 2rem;
+    font-size: x-large;
+    font-family: "space Mono" ,monospace;
+}
+
+.technologies {
+    margin-top: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  max-width: 100%;
+  font-family: sans-serif;
+}
+
+.html, .css, .js, .nodejs, .expressjs, .mongodb, .mongoose, .angular, .react, .c, .java, .latex, .bootstrap {
+    padding: 0.5rem 2rem;
+    font-size: small;
+    background-color: #8B5CF633;
+    color: #9B87F5;
+    border-radius: 30%;
+    /* background: rgba(135, 206, 235, 0.3); */
+}
+
+.header-education {
+    color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.about-education-text {
+    padding: 0.5rem 2rem;
+    font-size: small;
+    border-radius: 40%;
+    background-color: #8B5CF633;
+    color: #9B87F5;
+}
+
+.theme-line {
+    font-size: 1.6rem;
+    color: gray;
+    margin-bottom: 2rem;
+}
+
+.education-cards {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
   color: black;
+}
+
+.edu-card {
+  background: #fff;
+  border-radius: 1rem;
+  padding: 2rem;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  width: 300px;
+  transition: transform 0.3s ease;
+}
+
+.edu-card:hover {
+  transform: translateY(-10px);
+}
+
+.edu-card h3 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #2a2a2a;
+}
+
+.edu-card ul {
+  text-align: left;
+  margin-top: 2rem;
+  /* padding-left: 1.6rem; */
+  font-size: 2rem;
+  text-decoration: none;
+  list-style: none;
+}
+
+.education-card-main {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 2rem;
+}
+
+.skills-learned {
+    margin-top: 2rem;
+    font-size: 1.5rem;
+}
+
+.period {
+    font-size: 2rem;
+}
+
+.calendar-icon {
+  background-color: #dcd6f7; /* 🎨 your chosen color */
+  padding: 6px;
+  border-radius: 50%;
+  font-size: 1.2rem;
 }
