@@ -107,7 +107,7 @@ background: linear-gradient(to right, #0f2027, #2c5364);
 }
 
 .class-logo {
-  height: 100%;
+  /* height: 100%; */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -687,4 +687,231 @@ input::placeholder, textarea::placeholder {
 .contact-info-text {
     align-self: center;
     justify-self: center;
+}
+
+/* Project details */
+
+.card-container1 {
+  position: relative;
+  padding: 20px;
+}
+
+.card1 {
+    margin-left: 2rem;
+  width: 35rem;
+  border-radius: 20px;
+  overflow: hidden;
+  background: rgba(15, 15, 15, 0.9);
+  box-shadow: 0 0 20px rgba(204, 102, 255, 0.3);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.card-banner {
+  height: 16rem;
+  background: linear-gradient(to right, #9a1aff, #3db2ff);
+}
+
+.card-content {
+  padding: 20px;
+}
+
+.card-title {
+  color: #d088ff;
+  font-weight: bold;
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+
+.card-desc {
+  color: #bbb;
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+.tags {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.tag {
+  background-color: #1e1e2e;
+  padding: 5px 10px;
+  border-radius: 15px;
+  font-size: 12px;
+  color: #ddd;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.code-btn {
+  background: transparent;
+  border: 1px solid #d088ff;
+  color: #d088ff;
+  padding: 8px 15px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 14px;
+  transition: 0.3s;
+  font-family: "Space Mono", monospace;
+}
+
+.code-btn:hover {
+  background-color: #d088ff;
+  color: black;
+}
+
+.live-btn {
+  background: linear-gradient(to right, #d088ff, #ff66cc);
+  color: white;
+  padding: 8px 15px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.live-btn:hover {
+  opacity: 0.85;
+}
+
+.grid-project {
+  display: grid;
+  column-gap: 7.4rem;
+  row-gap: 4.6rem;
+  padding-left: 5rem;
+  padding-right: 5rem;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 6rem;
+}
+
+
+.grid-project .card-container1:nth-child(1) {
+    /* transform: translateX(6rem); */
+}
+
+.grid-project .card-container1:nth-child(3) {
+    /* transform: translateX(6rem); */
+}
+
+.card11 {
+    transform: translateX(10rem);
+}
+
+.card3 {
+     transform: translateX(10rem);
+}
+
+.footer-divider {
+  height: 1px;
+  background: #444; /* line color */
+  box-shadow: 0 1px 10px rgba(0, 0, 0, 0.5); /* soft shadow below */
+  /* margin: 3rem 0; */
+}
+
+footer {
+    background: rgba(24, 24, 24, 0.9);
+    padding-bottom: 2rem;
+}
+
+.section-footer {
+    margin: 4rem 3rem 4rem 3rem;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.last-discription {
+    flex-wrap: wrap !important;
+
+}
+
+.footer-heading {
+    background: linear-gradient(to right, #ff69b4, #00bfff);
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 2.4rem;
+    margin-bottom: 1.6rem;
+}
+
+.class-portfolio {
+    background: #9B87F5;
+        -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.footer-para {
+    font-size: 1.4rem;
+    margin-bottom: 1.6rem;
+    font-family: Inter, sans-serif;
+    line-height: 2rem;
+}
+
+.last-logo {
+    display: flex;
+    gap: 2rem;
+}
+
+.footer-logo {
+    height: 2rem;
+    width: 2rem;
+    padding: 0.8rem 0.8rem;
+    color: #00E6E6;
+    border-radius: 50%;
+}
+
+.footer-logo:hover {
+    background-color: #181818;
+}
+
+.quick-links {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem; /* Or row-gap: 1.2rem; */
+}
+
+.quick-links a {
+  font-size: 1.6rem;
+  text-decoration: none;
+  color: #FFFFFFB3;
+}
+
+.quick-links h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1.3rem;
+}
+
+.last-contact-details {
+    display: flex;
+  flex-direction: column;
+  gap: 1rem; /* Or row-gap: 1.2rem; */
+}
+
+.last-contact-details h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1.3rem;
+}
+
+.last-contact-details p {
+    font-size: 1.6rem;
+  text-decoration: none;
+  color: #FFFFFFB3;
+}
+
+.copywrite {
+    font-size: 1.4rem;
+    color: #FFFFFFB3;
+    margin-top: 3rem;
+}
+
+.about-education {
+    background: #1c1c1c;
+    /* background: white; */
 }
