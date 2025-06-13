@@ -792,6 +792,9 @@ input::placeholder, textarea::placeholder {
   margin-top: 6rem;
 }
 
+.card-container1 {
+  position: relative;
+}
 
 .grid-project .card-container1:nth-child(1) {
     /* transform: translateX(6rem); */
@@ -802,11 +805,17 @@ input::placeholder, textarea::placeholder {
 }
 
 .card11 {
-    transform: translateX(10rem);
+    /* transform: translateX(10rem); */
+    position: absolute;
+  right: 0;
+  bottom: 2;
 }
 
 .card3 {
-     transform: translateX(10rem);
+     /* transform: translateX(10rem); */
+     position: absolute;
+  right: 0;
+  bottom: 2;
 }
 
 .footer-divider {
