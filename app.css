@@ -17,6 +17,119 @@ body {
   color: #FFFFFF;
 }
 
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fdf2e9;
+  position: relative;
+
+  /* Because we want head to be sticky later */
+  height: 7rem;
+  padding: 0 4.8rem;
+  /* position: fixed; */
+  /* z-index: 1000; */
+  /* width: 100%; */
+}
+
+.main-nav-list {
+  list-style: none; /* to remove bullet points symbol*/
+  display: flex;
+  align-items: center;
+  gap: 3.8rem;
+  color: #00c9ff;
+}
+
+.main-nav-link:link,
+.main-nav-link:visited {
+  display: inline-block;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.8rem;
+  transition: all 0.3s;
+}
+
+.main-nav-link {
+    color: rgba(0, 191, 255, 1);
+}
+
+.main-nav-link:hover,
+.main-nav-link:active {
+  color: rgba(138, 43, 226, 0.8);
+  cursor: pointer;
+}
+
+.main-nav-link.nav-cta:link,
+.main-nav-link.nav-cta:visited {
+  padding: 1.6rem 3.2rem;
+  border-radius: 9px;
+  color: #fff;
+  background: linear-gradient(to right, #141e30, #243b55);
+}
+
+.main-nav-link.nav-cta:hover,
+.main-nav-link.nav-cta:active {
+background: linear-gradient(to right, #0f2027, #2c5364);
+
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 8rem;
+  padding: 0 4.8rem;
+  color: pink;
+  background-color: rgba(15, 17, 26, 1);
+  z-index: 999;
+  box-shadow: 0 1.2rem 3.2rem rgba(0, 0, 0, 0.03);
+  /* transform: translateY(-100%); */
+  /* transition: all 0.4s ease-in; */
+}
+
+.bg-dark {
+    background-color: #0c0c1DCC;
+}
+
+.logo-colour {
+    color: #FFFFFFB3;
+}
+
+.logo {
+  /* height: 50%; */
+  width: 19rem;
+  object-fit: cover;
+  position: relative;
+  top: -5rem;
+  /* object-position: top center; */
+  transform: scale(0.7);
+}
+
+.class-logo {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.4rem;
+  font-family: "Space Mono", monospace;
+  font-weight: 700;
+    line-height: 2rem;
+    text-decoration: none;
+    margin-left: 2rem;
+    background: linear-gradient(to right, #ff69b4, #00bfff);
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.class-raj {
+    background: #9B87F5;
+        -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
 .hero {
   position: relative;
   width: 100%;
@@ -66,7 +179,7 @@ body {
     justify-content: center;
     text-align: center;
     font-size: xxx-large;
-    padding-top: 10rem;
+    padding-top: 14rem;
     line-height: 7.5rem;
     row-gap: 5rem;
 }
@@ -103,7 +216,7 @@ body {
 .discription-heading {
     font-size: 2.5rem;
     line-height: 3rem;
-    margin-top: 2.4rem;
+    margin-top: 3rem;
     opacity: 0.7;
 }
 
@@ -116,17 +229,33 @@ body {
 .contact-logo {
     display: flex;
     gap: 4rem;
-    /* margin-top: 4rem; */
+    justify-content: center;
+    flex-wrap: wrap; /* 💡 allow icons to wrap on small screens */
+    padding: 2rem 1rem;
+    box-sizing: border-box;
+    overflow: hidden;
+    align-items: center;
+    max-width: 100%;
+}
+
+.contact-logo {
+    
 }
 
 .logo, .down-arrow {
+    transform-origin: center;
+    flex-shrink: 0;
     color: white;
     background-color: rgba(0, 0, 0, 0.3);
     border-radius: 50%;
-    height: 7rem;
-    width: 7rem;
+    height: 5rem;
+    width: 5rem;
     /* padding: 5 5rem; */
-    transform: scale(0.9);
+    /* transform: scale(0.9); */
+}
+
+.logo {
+    transform: translateY(4rem);
 }
 
 .logo:hover {
@@ -149,7 +278,7 @@ body {
   margin: 0 auto;
   color: white;
   padding-top: 14rem;
-  padding-bottom: 7rem;
+  padding-bottom: 14rem;
 }
 
 .custom-shape-divider-bottom-1749701377 {
@@ -210,6 +339,8 @@ body {
   display: grid;
   column-gap: 9.4rem;
   row-gap: 9.6rem;
+  padding-left: 5rem;
+  padding-right: 5rem;
 }
 
 .grid--2-cols {
@@ -319,7 +450,8 @@ body {
   font-family: sans-serif;
 }
 
-.html, .css, .js, .nodejs, .expressjs, .mongodb, .mongoose, .angular, .react, .c, .java, .latex, .bootstrap {
+.html, .css, .js, .nodejs, .expressjs, .mongodb, .mongoose, .angular, .react, .c, .java, .latex, .bootstrap
+, .git {
     padding: 0.5rem 2rem;
     font-size: small;
     background-color: #8B5CF633;
@@ -388,7 +520,7 @@ body {
 .education-card-main {
     display: flex;
     justify-content: space-evenly;
-    margin-top: 2rem;
+    margin-top: 4rem;
 }
 
 .skills-learned {
@@ -405,4 +537,154 @@ body {
   padding: 6px;
   border-radius: 50%;
   font-size: 1.2rem;
+}
+
+.kv {
+    margin-top: 3rem;
+}
+
+.education-card-3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.plus-logo {
+    font-size: 5rem;
+    padding: 1.5rem 1.8rem;
+    border-radius: 100%;
+    background-color: gray;
+    opacity: 0.7;
+    border: 2px solid darkcyan;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    transform: translateX(7rem);
+}
+
+.text {
+    font-size: medium;
+    margin-top: 22rem;
+}
+
+.contact-me {
+    background: #1c1c1c
+}
+
+.for-margin {
+    margin-top: 10rem;
+}
+
+.contact-heading {
+    font-family: "Space Mono", monospace;
+    font-size: 2.4rem;
+    color: #F8FAFC;
+}
+
+.contact-discription {
+    margin-top: 0.8rem;
+    font-size: 1.6rem;
+    font-family: monospace;
+    color: #FFFFFFB3;
+}
+
+.contact-details {
+    margin-top: 3.2rem;
+}
+
+.email-detail, .phone-detail, .location-detail {
+    display: flex;
+    margin: 1.6rem;
+    gap: 2rem;
+}
+
+.icon {
+    font-size: x-large;
+    padding: 1.1rem 1.1rem;
+    background: #8B5CF633;
+    border-radius: 100%;
+}
+
+.details {
+    align-self: center;
+}
+
+.sub-head {
+    font-size: 1.4rem;
+    font-family: Inter, sans-serif;
+    color: #FFFFFFB3;
+}
+
+.sub-info {
+    font-size: 1.6rem;
+    font-family: Inter, sans-serif;
+    color: #FFFFFF;
+}
+
+.contact-form {
+  /* background: rgba(0, 0, 0, 0.3); */
+  background: linear-gradient(90deg, #11998e, #38ef7d);
+  padding: 2rem;
+  border-radius: 1rem;
+  width: 90%;
+  max-width: 500px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(10px);
+  color: #fff;
+}
+
+.form-group-row {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;      /*It gives freedom of wraping to next line*/
+}
+
+.form-group {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  margin-top: 1rem;
+  font-size: 1.6rem;
+}
+
+label {
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+input, textarea {
+  background: rgba(0, 0, 0, 0.6);
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.8rem;
+  color: #fff;
+  font-size: 1.4rem;
+  outline: none;
+}
+
+input::placeholder, textarea::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.send-btn {
+  margin-top: 2rem;
+  width: 100%;
+  padding: 0.8rem;
+  border: none;
+  border-radius: 0.5rem;
+  background: linear-gradient(to right, #8b5cf6, #ec4899);
+  color: #fff;
+  font-size: 1.4rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.send-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(236, 72, 153, 0.5);
+}
+
+.contact-info-text {
+    align-self: center;
+    justify-self: center;
 }
