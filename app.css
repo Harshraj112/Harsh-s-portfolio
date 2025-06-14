@@ -90,6 +90,7 @@ background: linear-gradient(to right, #0f2027, #2c5364);
 
 .bg-dark {
     background-color: #0c0c1DCC;
+    opacity: 0.8;
 }
 
 .logo-colour {

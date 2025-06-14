@@ -17,16 +17,16 @@
 // obs.observe(sectionHeroEl);
 
 function usrScroll() {
-    const navbar = document.querySelector('.header');
+    const navbar1 = document.querySelector('.header');
     const logos = document.querySelectorAll('.main-nav-link:link'); // select all matching elements
 
     window.addEventListener('scroll', () => {
         if (window.scrollY > 50) {
-            navbar.classList.add('bg-dark');
+            navbar1.classList.toggle('bg-dark');
             // navbar.classList.add('sticky');
             logos.forEach(logo => logo.classList.add('logo-colour')); // apply to each
         } else {
-            navbar.classList.remove('bg-dark');
+            navbar1.classList.remove('bg-dark');
             // navbar.classList.remove('sticky');
             logos.forEach(logo => logo.classList.remove('logo-colour'));
         }

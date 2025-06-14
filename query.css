@@ -180,6 +180,10 @@
         visibility: hidden;
     }
 
+    .header {
+        padding: 0 2.4rem;
+    }
+
     .nav-open .main-nav {
         opacity: 1;
         pointer-events: auto;
