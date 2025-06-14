@@ -260,4 +260,8 @@
     .last-contact-details {
         margin-top:1rem;
     }
+
+    .header {
+        display: none;
+    }
 }
