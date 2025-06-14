@@ -197,6 +197,7 @@
 
     .sticky {
         position: relative;
+        /* position: absolute; */
     }
 
     .main-nav-list {

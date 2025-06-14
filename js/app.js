@@ -22,7 +22,7 @@ function usrScroll() {
 
     window.addEventListener('scroll', () => {
         if (window.scrollY > 50) {
-            navbar1.classList.toggle('bg-dark');
+            navbar1.classList.add('bg-dark');
             // navbar.classList.add('sticky');
             logos.forEach(logo => logo.classList.add('logo-colour')); // apply to each
         } else {
@@ -60,6 +60,12 @@ document.addEventListener('DOMContentLoaded', usrScroll);
 
 const btnNav = document.querySelector(".btn-mobile-nav");
 const header = document.querySelector(".header");
+
+const sticky1 = document.querySelector(".sticky");
+
+btnNav.addEventListener("click", function () {
+    document.sticky1.style.position = "relative";
+})
 
 btnNav.addEventListener("click", function () {
     header.classList.toggle("nav-open");
