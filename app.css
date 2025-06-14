@@ -465,6 +465,7 @@ background: linear-gradient(to right, #0f2027, #2c5364);
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-align: center;
 }
 
 .about-education-text {
@@ -625,7 +626,7 @@ background: linear-gradient(to right, #0f2027, #2c5364);
   padding: 2rem;
   border-radius: 1rem;
   width: 90%;
-  max-width: 500px;
+  /* max-width: 500px; */
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.25);
   backdrop-filter: blur(10px);
   color: #fff;
@@ -692,13 +693,15 @@ input::placeholder, textarea::placeholder {
 /* Project details */
 
 .card-container1 {
-  position: relative;
+  display: flex;
+  justify-content: center; /* centers child horizontally */
+  align-items: center;
   padding: 20px;
 }
 
+
 .card1 {
-    margin-left: 2rem;
-  width: 35rem;
+  /* width: 35rem; */
   border-radius: 20px;
   overflow: hidden;
   background: rgba(15, 15, 15, 0.9);
@@ -790,11 +793,9 @@ input::placeholder, textarea::placeholder {
   padding-right: 5rem;
   grid-template-columns: 1fr 1fr;
   margin-top: 6rem;
+  align-self: start;
 }
 
-.card-container1 {
-  position: relative;
-}
 
 .grid-project .card-container1:nth-child(1) {
     /* transform: translateX(6rem); */
@@ -804,19 +805,8 @@ input::placeholder, textarea::placeholder {
     /* transform: translateX(6rem); */
 }
 
-.card11 {
-    /* transform: translateX(10rem); */
-    position: absolute;
-  right: 0;
-  bottom: 2;
-}
 
-.card3 {
-     /* transform: translateX(10rem); */
-     position: absolute;
-  right: 0;
-  bottom: 2;
-}
+
 
 .footer-divider {
   height: 1px;

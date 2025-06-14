@@ -1,0 +1,263 @@
+/* Below 1232px(smaller computer) */
+@media (max-width: 77em) {
+    .hero-content {
+        max-width: 120rem;
+        gap: 4rem;
+    }
+
+    .zeroth-heading {
+        font-size: 2rem;
+    }
+
+    .primary-heading {
+        font-size: 6.2rem;
+    }
+
+    .secondary-heading {
+        font-size: 6.2rem;
+    }
+
+    .tertiary-heading {
+        font-size: 6.2rem;
+    }
+
+    .discription-heading {
+        font-size: 1.5rem;
+    }
+}
+
+/* Below 1040px */
+@media (max-width: 65em) {
+    html {
+        font-size: 62.50%;
+    }
+
+    .grid-1--cols {
+        grid-template-columns: 1fr;
+    }
+    
+    .container {
+        padding: 7rem 0;
+    }
+
+    .my-heading {
+        font-size: 3rem;
+    }
+
+    .discription-myself {
+        font-size: 1.3rem;
+    }
+
+    .grid-1--cols-3 {
+        grid-template-columns: 1fr;
+    }
+
+    .grid-1--cols-1 {
+        /* row-gap: 2rem; */
+        column-gap: 2rem;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+/* Below 976px */
+@media (max-width: 61em) {
+    html {
+        font-size: 62.50%;
+    }
+
+    .my-heading h2 {
+        font-size: 4rem;
+    }
+
+    .education-card-main {
+        /* flex-direction: column; */
+        /* row-gap: 2rem; */
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 2rem; /* spacing between cards */
+        padding: 0 4rem;
+    }
+
+    .education-cards {
+        flex: 1 1 45%; /* allows 2 cards per row */
+        min-width: 300px;
+        max-width: 500px;
+        background: white;
+        padding: 1rem;
+        border-radius: 1rem;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        background: transparent;
+    }
+
+    .card-full {
+        /* flex: 0 0 100%; takes full row */
+        display: flex;
+        justify-content: center;
+    }
+
+    .grid-1--cols-2 {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-form {
+        width: 100%;
+        /* height: 100%; */
+        /* max-width: 97.6rem; */
+    }
+}
+
+/* Below 960 px  */
+
+@media (max-width: 60em) {
+
+    html {
+        font-size: 62.50%;
+    }
+
+    .grid-project {
+        column-gap: 0rem; 
+        row-gap: 0rem;
+        padding-left: 5rem;
+        padding-right: 5rem;
+        margin-top: 6rem;
+        }
+
+    .zeroth-heading {
+        font-size: 1.5rem;
+    }
+
+    .primary-heading {
+        font-size: 4.2rem;
+    }
+
+    .secondary-heading {
+        font-size: 4.2rem;
+    }
+
+    .tertiary-heading {
+        font-size: 4.2rem;
+    }
+
+    .discription-heading {
+        font-size: 1.3rem;
+    }
+
+    .my-heading h2 {
+        font-size: 3.5rem;
+    }
+}
+
+@media (max-width: 56em) {
+    .grid-1--cols-1 {
+        grid-template-columns: 1fr;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .card1 {
+    justify-content: center; /* centers grid items horizontally */
+    align-items: center;
+    align-self: center;
+}
+
+}
+
+/* Below 544px */
+
+@media (max-width: 34em) {
+
+    html {
+        font-size: 62.50%;
+    }
+
+    .zeroth-heading {
+        font-size: 1rem;
+    }
+
+    .primary-heading {
+        font-size: 3.2rem;
+    }
+
+    .secondary-heading {
+        font-size: 3.2rem;
+    }
+
+    .tertiary-heading {
+        font-size: 3.2rem;
+    }
+
+    .discription-heading {
+        font-size: 1rem;
+    }
+
+    .logo:link, .logo:visited {
+        height: 13rem;
+        width: 3rem;
+    }
+
+    .contact-logo {
+        
+    }
+
+    .card3 {
+        align-self: flex-end;
+    }
+    
+
+    .my-heading h2 {
+        font-size: 3rem;
+        text-align: center;
+    }
+
+    .side-img-1 {
+        /* height: 10rem;
+        width: 10rem; */
+        transform: scale(0.8);
+    }
+
+    .myself {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+
+    .theme-line p {
+        padding: 0 2rem;
+        font-size: 1.8rem;
+        text-align: center;
+    }
+
+    .grid-1--cols-3 {
+        grid-template-columns: 1fr;
+        row-gap: 1rem;
+    }
+
+    .section-footer {
+        display: flex;
+        flex-wrap: wrap;
+        color: white;
+        padding: 2rem;
+        gap: 2rem;
+    }
+
+    .footer-item1 {
+        flex: 1 1 100%; /* Takes full width */
+    }
+
+    .footer-item2,
+    .footer-item3 {
+        flex: 1 1 45%; /* Adjust width of each half item */
+    }
+    .grid-1--cols-1 {
+        padding: 0 2rem;
+    }
+
+    .second-last-div {
+        padding: 0 0.5rem;
+    }
+
+    .last-contact-details {
+        margin-top:1rem;
+    }
+}
