@@ -188,6 +188,10 @@
 
     }
 
+    .class-down-arrow {
+        display: none;
+    }
+
 }
 
 /* Below 608px */
@@ -334,4 +338,36 @@
     .about-education-text {
         margin-bottom: 0.5rem;
     }
+
+    /* .class-down-arrow {
+        display: none;
+    } */
+}
+
+
+@media (max-width: 26em) {
+    html {
+        font-size: 62.50%;
+    }
+
+    .zeroth-heading {
+        font-size: 1.5rem;
+    }
+
+    .primary-heading {
+        font-size: 2.2rem;
+    }
+
+    .secondary-heading {
+        font-size: 2.2rem;
+    }
+
+    .tertiary-heading {
+        font-size: 2.2rem;
+    }
+
+    .discription-heading {
+        font-size: 1.1rem;
+    }
+
 }
