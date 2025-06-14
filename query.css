@@ -203,7 +203,7 @@
     }
 
     .zeroth-heading {
-        font-size: 1rem;
+        font-size: 1.5rem;
     }
 
     .primary-heading {
@@ -219,16 +219,12 @@
     }
 
     .discription-heading {
-        font-size: 1rem;
+        font-size: 1.5rem;
     }
 
     .logo:link, .logo:visited {
         height: 13rem;
         width: 3rem;
-    }
-
-    .contact-logo {
-        
     }
 
     .card3 {
@@ -279,6 +275,11 @@
     .about-us {
         padding-top: 2rem;
     }
+
+    .astronaut-img {
+        width: 30rem;
+        height: 30rem;
+    }
 }
 
 /* 480px */
@@ -304,7 +305,7 @@
     }
 
     .discription-heading {
-        font-size: 1.2rem;
+        font-size: 1.5rem;
     }
 
     .about-me {
@@ -342,9 +343,13 @@
     /* .class-down-arrow {
         display: none;
     } */
+
+    .card1 {
+        width: auto;
+    }
 }
 
-
+/* 416px */
 @media (max-width: 26em) {
     html {
         font-size: 62.50%;
@@ -369,5 +374,7 @@
     .discription-heading {
         font-size: 1.1rem;
     }
+
+    
 
 }

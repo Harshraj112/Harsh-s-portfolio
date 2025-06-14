@@ -709,7 +709,9 @@ input::placeholder, textarea::placeholder {
 
 
 .card1 {
-  /* width: 35rem; */
+  width: 40rem;
+  /* width: auto; */
+  /* max-width: 40rem; */
   border-radius: 20px;
   overflow: hidden;
   background: rgba(15, 15, 15, 0.9);
@@ -927,3 +929,20 @@ footer {
     padding: 2 1rem;
 
   }
+
+.astronaut-img {
+  background-color: pink;
+  width: 50rem;
+  height: 50rem;
+  justify-self: center;
+  align-self: center;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+.astronaut-img img {
+  object-fit: cover;
+  object-position: top;
+  height: 100%;
+  width: 100%;
+}
