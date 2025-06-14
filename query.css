@@ -147,6 +147,72 @@
     .my-heading h2 {
         font-size: 3.5rem;
     }
+
+    .btn-mobile-nav {
+        display: block;
+    }
+
+    .main-nav {
+        background-color: rgba(10, 10, 10, 0.9);
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        transform: translateX(100%);
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.5s ease-in;
+
+        /* Hide the navigation */
+        /* Allow no transaction */
+        /* display: none; */
+
+        /* 1) Hide it visually */
+        opacity: 0;
+
+        /* 2) Make it unaccessible to mouse and keyboard */
+        pointer-events: none;           /*clever trick to make sure hidden elements don’t accidentally block interactions.*/
+
+        /* 3) Hide it from screen readers */
+        visibility: hidden;
+    }
+
+    .nav-open .main-nav {
+        opacity: 1;
+        pointer-events: auto;
+        visibility: visible;
+        transform: translateX(0);
+    }
+
+    .main-nav-list {
+        color: white;
+    }
+
+    .sticky {
+        position: relative;
+    }
+
+    .main-nav-list {
+        flex-direction: column;
+        gap: 4.8rem;
+    }
+
+    .main-nav-link:link,
+    .main-nav-link:visited {
+        font-size: 3rem;
+        color: white;
+    }
+
+    .nav-open .icon-mobile-nav[name="close-outline"] {
+    display: block;
+    }
+
+    .nav-open .icon-mobile-nav[name="menu-outline"] {
+    display: none;
+    }
 }
 
 /* 894px */
@@ -191,6 +257,11 @@
     .class-down-arrow {
         display: none;
     }
+
+    .hero-logo {
+    height: 3rem;
+    width: 3rem;
+}
 
 }
 
@@ -280,6 +351,8 @@
         width: 30rem;
         height: 30rem;
     }
+
+    
 }
 
 /* 480px */

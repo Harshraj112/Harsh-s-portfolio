@@ -34,3 +34,33 @@ function usrScroll() {
 }
 
 document.addEventListener('DOMContentLoaded', usrScroll);
+
+
+// STICK navigator
+
+// const sectionHeroEl = document.querySelector(".hero");
+
+// const obs = new IntersectionObserver(function(entries){
+//     const ent = entries[0];
+//     if(ent.isIntersecting === false) {
+//         document.body.classList.add("sticki");
+//         // document.body.classList.remove("sticky");
+//     }
+//     if(ent.isIntersecting === true) {
+//         document.body.classList.remove("sticki");
+//         // document.body.classList.add("sticky");
+//     }
+// }, {
+//     //In the viewport
+//     root: null,
+//     threshold: 0,
+//     rootMargin: '-80px'
+// });
+// obs.observe(sectionHeroEl);
+
+const btnNav = document.querySelector(".btn-mobile-nav");
+const header = document.querySelector(".header");
+
+btnNav.addEventListener("click", function () {
+    header.classList.toggle("nav-open");
+});
