@@ -339,6 +339,7 @@ background: linear-gradient(to right, #0f2027, #2c5364);
   display: grid;
   column-gap: 9.4rem;
   row-gap: 9.6rem;
+  overflow: hidden;
   /* padding-left: 5rem; */
   /* padding-right: 5rem; */
 }

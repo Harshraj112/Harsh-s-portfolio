@@ -276,3 +276,62 @@
         padding-top: 2rem;
     }
 }
+
+/* 480px */
+@media (max-width: 30em) {
+    html {
+        font-size: 62.50%;
+    }
+
+    .zeroth-heading {
+        font-size: 1.5rem;
+    }
+
+    .primary-heading {
+        font-size: 2.7rem;
+    }
+
+    .secondary-heading {
+        font-size: 2.7rem;
+    }
+
+    .tertiary-heading {
+        font-size: 2.7rem;
+    }
+
+    .discription-heading {
+        font-size: 1.2rem;
+    }
+
+    .about-me {
+        line-height: 5rem;
+    }
+
+    .heading-1 {
+        font-size: 2.2rem;
+    }
+
+    .my-heading h2 {
+        font-size: 2.7rem;
+    }
+
+    .skills-heading {
+        font-size: 2.2rem;
+    }
+
+    .contact-heading {
+        font-size: 2.2rem;
+    }
+
+    .contact-discription {
+        font-size: 1.4rem;
+    }
+
+    .theme-line p {
+        font-size: 1.4rem;
+    }
+
+    .about-education-text {
+        margin-bottom: 0.5rem;
+    }
+}
