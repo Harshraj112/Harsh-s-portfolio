@@ -153,7 +153,8 @@
     }
 
     .main-nav {
-        background-color: rgba(10, 10, 10, 0.9);
+        background-color: rgba(10, 10, 10, 0.6);
+        backdrop-filter: blur(10px);
         position: absolute;
         top: 0;
         left: 0;
