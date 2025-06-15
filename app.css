@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  /* outline: 1px solid red; */
 }
 
 html, body {
@@ -230,7 +231,6 @@ background: linear-gradient(to right, #0f2027, #2c5364);
 
 .contact-logo {
     display: flex;
-
     gap: 3rem;
     justify-content: center;
     /* flex-wrap: wrap; 💡 allow icons to wrap on small screens */
@@ -239,15 +239,18 @@ background: linear-gradient(to right, #0f2027, #2c5364);
     overflow: hidden;
     align-items: center;
     /* max-width: 100%; */
-}
-
-.hero-logo {
+    z-index: 10;
+  }
+  
+  .hero-logo {
     height: 5rem;
     width: 5rem;
     padding: 1rem 1rem;
     background-color: #333333;
     border-radius: 50%;
     color: white;
+    pointer-events: auto;
+    z-index: 10;
 }
 
 .hero-logo:hover {

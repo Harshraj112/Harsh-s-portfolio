@@ -75,25 +75,33 @@ btnNav.addEventListener("click", function () {
 const allLinks = document.querySelectorAll("a:link");
 
 allLinks.forEach(function (link) {
-    link.addEventListener("click", function (e) {
-        e.preventDefault();
-        const href = link.getAttribute("href");
+  link.addEventListener("click", function (e) {
+    const href = link.getAttribute("href");
 
-        // Scroll back to top
-        if (href === "#")
-            window.scrollTo({
-                top: 0,
-                behavior: "smooth",
-            });
+    // ✅ Internal link (# or #section)
+    if (href === "#" || href.startsWith("#")) {
+      e.preventDefault();
 
-        // Scroll to other links
-        if (href !== "#" && href.startsWith("#")) {
-            const sectionEl = document.querySelector(href);
-            sectionEl.scrollIntoView({ behavior: "smooth" });
-        }
+      // Scroll to top
+      if (href === "#") {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
+      }
 
-        // Close mobile navigation
-        if (link.classList.contains("main-nav-link"))
-            header.classList.toggle("nav-open");
-    });
+      // Scroll to specific section
+      if (href !== "#" && href.startsWith("#")) {
+        const sectionEl = document.querySelector(href);
+        sectionEl.scrollIntoView({ behavior: "smooth" });
+      }
+
+      // Close mobile nav if link is inside it
+      if (link.classList.contains("main-nav-link"))
+        header.classList.toggle("nav-open");
+    }
+
+    // ✅ Let external links (like https://...) work normally
+  });
 });
+
