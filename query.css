@@ -358,6 +358,9 @@
         height: 30rem;
     }
 
+    .hero-content {
+        transform: translateY(-4rem);
+    }
     
 }
 
@@ -456,4 +459,10 @@
 
     
 
+}
+
+@media (max-height: 37.5em) {
+    .about-us {
+        padding-top: 23rem;
+    }
 }
