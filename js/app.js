@@ -1,95 +1,118 @@
-// ---------- Sticky Navbar Background on Scroll ----------
-function usrScroll() {
-  const navbar = document.querySelector(".header");
-  const navLinks = document.querySelectorAll(".main-nav-link:link");
+// const sectionHeroEl = document.querySelector(".section-hero");
 
-  window.addEventListener("scroll", () => {
-    if (window.scrollY > 50) {
-      navbar.classList.add("bg-dark");
-      navLinks.forEach(link => link.classList.add("logo-colour"));
-    } else {
-      navbar.classList.remove("bg-dark");
-      navLinks.forEach(link => link.classList.remove("logo-colour"));
-    }
-  });
+// const obs = new IntersectionObserver(function(entries){
+//     const ent = entries[0];
+//     if(ent.isIntersecting === false) {
+//         document.body.classList.add("sticky");
+//     }
+//     if(ent.isIntersecting === true) {
+//         document.body.classList.remove("sticky");
+//     }
+// }, {
+//     //In the viewport
+//     root: null,
+//     threshold: 0,
+//     rootMargin: '-80px'
+// });
+// obs.observe(sectionHeroEl);
+
+function usrScroll() {
+    const navbar1 = document.querySelector('.header');
+    const logos = document.querySelectorAll('.main-nav-link:link'); // select all matching elements
+
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 50) {
+            navbar1.classList.add('bg-dark');
+            // navbar.classList.add('sticky');
+            logos.forEach(logo => logo.classList.add('logo-colour')); // apply to each
+        } else {
+            navbar1.classList.remove('bg-dark');
+            // navbar.classList.remove('sticky');
+            logos.forEach(logo => logo.classList.remove('logo-colour'));
+        }
+    });
 }
 
-document.addEventListener("DOMContentLoaded", usrScroll);
+document.addEventListener('DOMContentLoaded', usrScroll);
 
-// ---------- Mobile Nav Toggle ----------
+
+// STICK navigator
+
+// const sectionHeroEl = document.querySelector(".hero");
+
+// const obs = new IntersectionObserver(function(entries){
+//     const ent = entries[0];
+//     if(ent.isIntersecting === false) {
+//         document.body.classList.add("sticki");
+//         // document.body.classList.remove("sticky");
+//     }
+//     if(ent.isIntersecting === true) {
+//         document.body.classList.remove("sticki");
+//         // document.body.classList.add("sticky");
+//     }
+// }, {
+//     //In the viewport
+//     root: null,
+//     threshold: 0,
+//     rootMargin: '-80px'
+// });
+// obs.observe(sectionHeroEl);
+
 const btnNav = document.querySelector(".btn-mobile-nav");
 const header = document.querySelector(".header");
 
+const sticky1 = document.querySelector(".sticky");
+
 btnNav.addEventListener("click", function () {
-  header.classList.toggle("nav-open");
+    document.sticky1.style.position = "relative";
+})
+
+btnNav.addEventListener("click", function () {
+    header.classList.toggle("nav-open");
 });
 
-// ---------- Smooth Scroll for Internal Links ----------
-const allLinks = document.querySelectorAll("a:link");
+// Smooth navigator
 
-allLinks.forEach(link => {
-  link.addEventListener("click", function (e) {
-    const href = link.getAttribute("href");
+document.addEventListener("DOMContentLoaded", function () {
+  const allLinks = document.querySelectorAll("a:link");
+  const header = document.querySelector(".header"); // make sure this is defined
 
-    // Internal links only
-    // Select all internal links
-document.querySelectorAll('a[href^="#"]').forEach(function (link) {
-  link.addEventListener("click", function (e) {
-    const href = this.getAttribute("href");
+  allLinks.forEach(function (link) {
+    link.addEventListener("click", function (e) {
+      const href = link.getAttribute("href");
 
-    // Internal links only
-    if (href.startsWith("#")) {
-      e.preventDefault();
+      // Handle only internal links
+      if (href && (href === "#" || href.startsWith("#"))) {
+        e.preventDefault();
 
-      if (href === "#") {
-        window.scrollTo({
-          top: 0,
-          behavior: "smooth",
-        });
-      } else {
-        const sectionEl = document.querySelector(href);
-        if (sectionEl) {
-          // Use scrollIntoView with fallback for better mobile support
-          try {
-            sectionEl.scrollIntoView({
-              behavior: "smooth",
-              block: "start",
-            });
-          } catch (err) {
-            // fallback for browsers that don't support smooth
-            const top = sectionEl.getBoundingClientRect().top + window.pageYOffset;
-            window.scrollTo({ top, behavior: "smooth" });
-          }
+        // Scroll to top
+        if (href === "#") {
+          window.scrollTo({
+            top: 0,
+            behavior: "smooth",
+          });
         } else {
-          console.warn("Section not found for link:", href);
+          const sectionEl = document.querySelector(href);
+          if (sectionEl) {
+            try {
+              // Try smooth scroll using scrollIntoView
+              sectionEl.scrollIntoView({
+                behavior: "smooth",
+                block: "start",
+              });
+            } catch (err) {
+              // Fallback for older browsers
+              const top = sectionEl.getBoundingClientRect().top + window.scrollY;
+              window.scrollTo({ top, behavior: "smooth" });
+            }
+          }
+        }
+
+        // Close mobile nav if applicable
+        if (link.classList.contains("main-nav-link") && header) {
+          header.classList.toggle("nav-open");
         }
       }
-    }
+    });
   });
-});
-
-// ---------- Optional: Intersection Observer for Sticky Class ----------
-document.addEventListener("DOMContentLoaded", function () {
-  const heroSection = document.querySelector(".section-hero");
-
-  if (!heroSection) return;
-
-  const observer = new IntersectionObserver(
-    function (entries) {
-      const entry = entries[0];
-
-      if (!entry.isIntersecting) {
-        document.body.classList.add("sticky");
-      } else {
-        document.body.classList.remove("sticky");
-      }
-    },
-    {
-      root: null,
-      threshold: 0,
-      rootMargin: "-80px", // Push the trigger point 80px above the viewport
-    }
-  );
-
-  observer.observe(heroSection);
 });
