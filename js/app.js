@@ -32,6 +32,12 @@ allLinks.forEach(link => {
     const href = link.getAttribute("href");
 
     // Internal links only
+    // Select all internal links
+document.querySelectorAll('a[href^="#"]').forEach(function (link) {
+  link.addEventListener("click", function (e) {
+    const href = this.getAttribute("href");
+
+    // Internal links only
     if (href.startsWith("#")) {
       e.preventDefault();
 
@@ -43,11 +49,25 @@ allLinks.forEach(link => {
       } else {
         const sectionEl = document.querySelector(href);
         if (sectionEl) {
-          sectionEl.scrollIntoView({ behavior: "smooth" });
+          // Use scrollIntoView with fallback for better mobile support
+          try {
+            sectionEl.scrollIntoView({
+              behavior: "smooth",
+              block: "start",
+            });
+          } catch (err) {
+            // fallback for browsers that don't support smooth
+            const top = sectionEl.getBoundingClientRect().top + window.pageYOffset;
+            window.scrollTo({ top, behavior: "smooth" });
+          }
         } else {
           console.warn("Section not found for link:", href);
         }
       }
+    }
+  });
+});
+
 
       // Close mobile nav
       if (link.classList.contains("main-nav-link")) {
