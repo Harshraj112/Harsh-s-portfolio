@@ -68,23 +68,17 @@ document.querySelectorAll('a[href^="#"]').forEach(function (link) {
   });
 });
 
-
-      // Close mobile nav
-      if (link.classList.contains("main-nav-link")) {
-        header.classList.remove("nav-open");
-      }
-    }
-  });
-});
-
 // ---------- Optional: Intersection Observer for Sticky Class ----------
-const heroSection = document.querySelector(".section-hero");
+document.addEventListener("DOMContentLoaded", function () {
+  const heroSection = document.querySelector(".section-hero");
 
-if (heroSection) {
-  const obs = new IntersectionObserver(
+  if (!heroSection) return;
+
+  const observer = new IntersectionObserver(
     function (entries) {
-      const ent = entries[0];
-      if (!ent.isIntersecting) {
+      const entry = entries[0];
+
+      if (!entry.isIntersecting) {
         document.body.classList.add("sticky");
       } else {
         document.body.classList.remove("sticky");
@@ -93,9 +87,9 @@ if (heroSection) {
     {
       root: null,
       threshold: 0,
-      rootMargin: "-80px",
+      rootMargin: "-80px", // Push the trigger point 80px above the viewport
     }
   );
 
-  obs.observe(heroSection);
-}
+  observer.observe(heroSection);
+});
