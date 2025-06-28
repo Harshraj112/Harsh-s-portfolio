@@ -9,6 +9,9 @@ html, body {
   height: 100%;
   font-size: 62.5%;
   scroll-behavior: smooth;
+}
+
+html {
   overflow-x: hidden;
 }
 
@@ -92,7 +95,8 @@ background: linear-gradient(to right, #0f2027, #2c5364);
 
 .bg-dark {
     background-color: #0c0c1DCC;
-    opacity: 0.8;
+    /* background-color: #00bfff; */
+    opacity: 1;
 }
 
 .logo-colour {
@@ -990,4 +994,8 @@ footer {
   pointer-events: auto;
   visibility: visible;
   transform: translateX(0);
+}
+
+.footer-item2 a:hover {
+  text-decoration: underline;
 }

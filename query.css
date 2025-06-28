@@ -195,6 +195,8 @@
         pointer-events: auto;
         visibility: visible;
         transform: translateX(0);
+        /* background: rgba(0,0,0,0.8); */
+        backdrop-filter: blur(10px);
     }
 
     .main-nav-list {
