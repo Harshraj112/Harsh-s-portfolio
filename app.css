@@ -181,7 +181,7 @@ background: linear-gradient(to right, #0f2027, #2c5364);
     align-items: center;
     justify-content: center;
     text-align: center;
-    font-size: xxx-large;
+    font-size: xx-large;
     padding-top: 14rem;
     line-height: 7.5rem;
     row-gap: 5rem;
@@ -193,7 +193,7 @@ background: linear-gradient(to right, #0f2027, #2c5364);
 
 
 .zeroth-heading {
-    font-size: 3rem;
+    font-size: 2.5rem;
     color: #00E6E6;
 }
 
@@ -217,7 +217,7 @@ background: linear-gradient(to right, #0f2027, #2c5364);
 }
 
 .discription-heading {
-    font-size: 2.5rem;
+    font-size: 2.3rem;
     line-height: 3rem;
     margin-top: 3rem;
     opacity: 0.7;
